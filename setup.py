@@ -1,19 +1,14 @@
-# -*- coding: utf-8 -*-
-
 from setuptools import setup, find_packages
 
-extra = {}
-
 with open('README.md', 'rt') as f:
-    extra['long_description'] = f.read()
+    long_description = f.read()
 
 setup(
     name='smart_pinyin',
     version='0.4.6',
     description='Smart Chinese-to-Pinyin converter.',
-    author='mapix',
-    author_email='mapix.me@gmail.com',
-    url='https://github.com/mapix/pinyin',
+    author='Elephant Liu',
+    url='https://github.com/lexdene/Pinyin',
     license='MIT',
     packages=find_packages(),
     package_data={
@@ -26,5 +21,6 @@ setup(
         "Programming Language :: Python :: 3",
     ],
     install_requires=['jieba', 'six'],
-    **extra
+    long_description_content_type='text/markdown',
+    long_description=long_description,
 )
